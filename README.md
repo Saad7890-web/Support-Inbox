@@ -78,8 +78,8 @@ Channels enables persistent bidirectional communication over a Redis channel lay
 ### Setup
 
 ```bash
-git clone <repository>
-cd <repository>
+git clone https://github.com/Saad7890-web/Support-Inbox.git
+cd Support-Inbox
 cp .env.example .env
 docker compose up --build
 ```
