@@ -10,4 +10,8 @@ urlpatterns = [
         "",
         include("apps.api.urls.conversations"),
     ),
+    path(
+        "",
+        include("apps.api.urls.locks"),
+    ),
 ]
