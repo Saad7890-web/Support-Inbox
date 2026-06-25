@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     "health_check.db",
     "health_check.cache",
 
-    "apps",
+    "apps.accounts",
+    "apps.inbox",
 ]
 
 MIDDLEWARE = [
