@@ -14,4 +14,8 @@ urlpatterns = [
         "",
         include("apps.api.urls.locks"),
     ),
+    path(
+        "",
+        include("apps.api.urls.messages"),
+    ),
 ]
