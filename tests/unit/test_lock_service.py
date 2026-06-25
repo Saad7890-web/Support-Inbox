@@ -6,7 +6,9 @@ from tests.factories.user_factory import (
     UserFactory,
 )
 
+import pytest
 
+@pytest.mark.django_db
 def test_acquire_lock():
     user = UserFactory()
 
@@ -20,7 +22,7 @@ def test_acquire_lock():
     assert success is True
     assert data["user_id"] == user.id
 
-
+@pytest.mark.django_db
 def test_lock_owner_check():
     user = UserFactory()
 
@@ -37,7 +39,7 @@ def test_lock_owner_check():
         is True
     )
 
-
+@pytest.mark.django_db
 def test_lock_ttl_exists():
     user = UserFactory()
 

@@ -6,7 +6,9 @@ from tests.factories.message_factory import (
     MessageFactory,
 )
 
+import pytest
 
+@pytest.mark.django_db
 def test_conversation_total_messages():
     conversation = ConversationFactory()
 
