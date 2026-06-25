@@ -18,4 +18,9 @@ urlpatterns = [
         "",
         include("apps.api.urls.messages"),
     ),
+
+    path(
+        "",
+        include("apps.api.urls.ai"),
+    ),
 ]
