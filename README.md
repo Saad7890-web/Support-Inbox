@@ -227,6 +227,24 @@ docker compose exec web pytest --cov
 
 ---
 
+## OpenAPI Specification
+
+The project exposes a complete OpenAPI 3.0 specification generated using `drf-spectacular`.
+
+### Interactive Documentation
+
+| Documentation      | URL                                 |
+| ------------------ | ----------------------------------- |
+| Swagger UI         | `http://localhost:8000/api/docs/`   |
+| ReDoc              | `http://localhost:8000/api/redoc/`  |
+| Raw OpenAPI Schema | `http://localhost:8000/api/schema/` |
+
+### Generate OpenAPI Schema
+
+```bash
+docker compose exec web python manage.py spectacular \
+  --file schema.yml
+
 ## Roadmap
 
 - [ ] WebSocket JWT authentication
@@ -237,3 +255,4 @@ docker compose exec web pytest --cov
 - [ ] OpenTelemetry tracing
 
 ---
+```
