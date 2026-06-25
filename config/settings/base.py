@@ -113,6 +113,20 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Support Inbox API",
     "DESCRIPTION": "Customer Support Inbox Backend",
     "VERSION": "1.0.0",
+
+    "SERVE_INCLUDE_SCHEMA": False,
+
+    "SWAGGER_UI_SETTINGS": {
+        "persistAuthorization": True,
+    },
+
+    "SECURITY": [
+        {
+            "BearerAuth": [],
+        }
+    ],
+
+    "COMPONENT_SPLIT_REQUEST": True,
 }
 
 CELERY_BROKER_URL = REDIS_URL
