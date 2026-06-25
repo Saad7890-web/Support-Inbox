@@ -27,6 +27,10 @@ from apps.inbox.tasks import (
     analyze_conversation_sentiment,
 )
 
+from apps.inbox.services.broadcast_service import (
+    BroadcastService,
+)
+
 
 @extend_schema(
     tags=["Messages"],
@@ -75,6 +79,10 @@ class SendMessageAPIView(APIView):
                     "message"
                 ],
             )
+        )
+
+        BroadcastService.broadcast_message(
+            message
         )
 
         

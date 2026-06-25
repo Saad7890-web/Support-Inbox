@@ -69,16 +69,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": (
-            "channels_redis.core.RedisChannelLayer"
-        ),
-        "CONFIG": {
-            "hosts": [REDIS_URL],
-        },
-    },
-}
+
 
 DATABASES = {
     "default": {
@@ -169,3 +160,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = "accounts.User"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": (
+            "channels_redis.core.RedisChannelLayer"
+        ),
+        "CONFIG": {
+            "hosts": [REDIS_URL],
+        },
+    },
+}
